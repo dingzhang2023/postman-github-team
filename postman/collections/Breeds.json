@@ -8,13 +8,49 @@
 	"item": [
 		{
 			"name": "Get Breeds by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3cf9e557-3ee6-4ba7-a5bc-92b40e3177e3",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response data ID is 2\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.id).to.eql(2);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "31e2669b-5eda-4f4d-aaf4-8c81d5e02165",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{api_key}}",
+						"description": "API Key",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/v1/breeds/2",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"v1",
+						"breeds",
+						"2"
+					]
+				}
 			},
 			"response": []
 		}
