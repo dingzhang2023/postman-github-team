@@ -20,6 +20,10 @@
 							"pm.test(\"Response data ID is 2\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
 							"    pm.expect(jsonData.id).to.eql(2);\r",
+							"});\r",
+							"pm.test(\"Response name is Afghan Hound\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.name).to.eql(\"Afghan Hound\");\r",
 							"});"
 						],
 						"type": "text/javascript"
