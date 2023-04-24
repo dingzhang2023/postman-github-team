@@ -21,6 +21,11 @@
 							"pm.test(\"Test response id is 1\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
 							"    pm.expect(jsonData.id).to.eql(1);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Test user_id is aaaa\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.user_id).to.eql('aaaa');\r",
 							"});"
 						],
 						"type": "text/javascript"
