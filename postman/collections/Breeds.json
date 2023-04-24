@@ -5,5 +5,18 @@
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_uid": "26682376-1f60bffb-decf-4358-ad8d-0e2a48fba51d"
 	},
-	"item": []
+	"item": [
+		{
+			"name": "Get Breeds by ID",
+			"id": "31e2669b-5eda-4f4d-aaf4-8c81d5e02165",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
 }
